@@ -27,3 +27,4 @@ FROM bookings b
 JOIN (SELECT id, name, email FROM users) u ON b.user_id = u.id
 JOIN (SELECT id, title, price FROM properties) p ON b.property_id = p.id
 LEFT JOIN (SELECT booking_id, amount, payment_method FROM payments) pay ON b.id = pay.booking_id;
+["EXPLAIN"]
