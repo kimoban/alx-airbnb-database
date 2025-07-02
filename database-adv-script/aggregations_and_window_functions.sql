@@ -10,6 +10,7 @@ SELECT
     COUNT(b.id) as booking_count,
     RANK() OVER (ORDER BY COUNT(b.id) DESC) as booking_rank
     ["ROW_NUMBER()"]
+    ["EXPLAIN ANALYZE"]
 FROM properties p
 LEFT JOIN bookings b ON p.id = b.property_id
 GROUP BY p.id, p.name;
