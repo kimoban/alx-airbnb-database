@@ -7,6 +7,7 @@ INNER JOIN users u ON b.user_id = u.id;
 SELECT p.*, r.*
 FROM properties p
 LEFT JOIN reviews r ON p.id = r.property_id;
+["ORDER BY"]
 
 -- 3. FULL OUTER JOIN: All users and all bookings (including unmatched records)
 SELECT u.*, b.*
