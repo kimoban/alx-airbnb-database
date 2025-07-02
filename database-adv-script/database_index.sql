@@ -12,3 +12,5 @@ CREATE INDEX idx_booking_end_date ON bookings(end_date);
 CREATE INDEX idx_property_host_id ON properties(host_id);
 CREATE INDEX idx_property_price ON properties(price);
 CREATE INDEX idx_property_location ON properties(location);
+
+["EXPLAIN ANALYZE"]
